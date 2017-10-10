@@ -15,6 +15,7 @@
 <script type="text/ecmascript-6">
   import Slider from 'base/slider/slider'
   import {getCommend} from 'api/getCommend'
+  import {ERR_OK} from 'api/comfig'
 
   export default {
     data() {
@@ -30,7 +31,11 @@
 
     methods: {
       _getRecommend() {
-        getCommend().then((res) => {})
+        getCommend().then((res) => {
+          if (res.code === ERR_OK) {
+            this.recommends = res.data.slider
+          }
+        })
       }
     },
 
