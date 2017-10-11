@@ -1,6 +1,6 @@
 <template>
   <div class="recommend" ref="recommend">
-    <div class="slider-wrapper" ref="sliderWrapper">
+    <div v-if="recommends.length" class="slider-wrapper" ref="sliderWrapper">
       <slider>
         <div v-for="item in recommends">
           <a :href="item.linkUrl">
@@ -15,7 +15,7 @@
 <script type="text/ecmascript-6">
   import Slider from 'base/slider/slider'
   import {getCommend} from 'api/getCommend'
-  import {ERR_OK} from 'api/comfig'
+  import {ERR_OK} from 'api/config'
 
   export default {
     data() {
@@ -46,5 +46,4 @@
 </script>
 
 <style rel="stylesheet/stylus" lang="stylus">
-
 </style>

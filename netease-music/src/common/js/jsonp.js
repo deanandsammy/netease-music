@@ -15,7 +15,8 @@ export default function jsonp(url, data, option) {
 }
 
 function param(data) {
-  let url, value = ''
+  let url = ''
+  let value = ''
 
   for (let k in data) {
     value = data[k] !== undefined ? data[k] : ''
