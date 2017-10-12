@@ -42,11 +42,28 @@
         this._setSliderWidth()
         this._initDots()
         this._initSlider()
+
+        if (this.autoplay) {
+          this._play()
+        }
       }, 20)
+
+      window.addEventListener('resize', () => {
+        if (!this.slider) {
+          return
+        }
+
+        this._setSliderWidth(true)
+        this.slider.refresh()
+      })
+    },
+
+    destroyed() {
+      clearTimeout(this.timer)
     },
 
     methods: {
-      _setSliderWidth() {
+      _setSliderWidth(isResize) {
         this.children = this.$refs.sliderGroup.children
 
         let width = 0
@@ -60,7 +77,7 @@
           width += sliderWidth
         }
 
-        if (this.loop) {
+        if (this.loop && !isResize) {
           width += 2 * sliderWidth
         }
 
