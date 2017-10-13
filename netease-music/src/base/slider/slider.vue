@@ -59,6 +59,7 @@
     },
 
     destroyed() {
+      // 切换tab标签时，该组件会进入声明周期的destroyed阶段，此事应该清楚组件绑定的定时器
       clearTimeout(this.timer)
     },
 
