@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/netease-music/src/base/slider/slider.vue" line="25" mnemonic="1" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9c91db27-03a6-4d3b-b4bf-c3ade7386f61" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/netease-music/src/base/slider/slider.vue" afterPath="$PROJECT_DIR$/netease-music/src/base/slider/slider.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/netease-music/src/components/recommend/recommend.vue" afterPath="$PROJECT_DIR$/netease-music/src/components/recommend/recommend.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,21 +40,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scroll.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scroll.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/netease-music/src/base/scroll/scroll.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+            <state relative-caret-position="297">
+              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slider.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="slider.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/netease-music/src/base/slider/slider.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="310">
+              <caret line="109" column="30" lean-forward="true" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="30" />
               <folding>
                 <element signature="e#302#337#0" expanded="true" />
               </folding>
@@ -103,8 +106,8 @@
         <option value="$PROJECT_DIR$/netease-music/src/base/scroll/scroll..vue" />
         <option value="$PROJECT_DIR$/netease-music/src/components/recommend/recommend.vue" />
         <option value="$PROJECT_DIR$/netease-music/package.json" />
-        <option value="$PROJECT_DIR$/netease-music/src/base/slider/slider.vue" />
         <option value="$PROJECT_DIR$/netease-music/src/base/scroll/scroll.vue" />
+        <option value="$PROJECT_DIR$/netease-music/src/base/slider/slider.vue" />
       </list>
     </option>
   </component>
@@ -124,7 +127,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/netease-music/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="1932" />
     <option name="height" value="1047" />
@@ -136,13 +139,10 @@
           <State>
             <id />
           </State>
-          <State>
-            <id>Handlebars/Mustache</id>
-          </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>Handlebars/Mustache</id>
+            <id />
           </State>
         </selected-state>
       </profile-state>
@@ -314,15 +314,15 @@
       <workItem from="1507882694024" duration="8626000" />
       <workItem from="1508425482444" duration="624000" />
       <workItem from="1508426124664" duration="1487000" />
-      <workItem from="1508461510623" duration="10042000" />
+      <workItem from="1508461510623" duration="14154000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98191000" />
+    <option name="totallyTimeSpent" value="102303000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17239584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -708,21 +708,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/netease-music/src/base/slider/slider.vue">
+    <entry file="file://$PROJECT_DIR$/netease-music/src/base/scroll/scroll.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="e#302#337#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="297">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/netease-music/src/base/scroll/scroll.vue">
+    <entry file="file://$PROJECT_DIR$/netease-music/src/base/slider/slider.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="310">
+          <caret line="109" column="30" lean-forward="true" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="30" />
+          <folding>
+            <element signature="e#302#337#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

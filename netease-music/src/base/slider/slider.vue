@@ -25,7 +25,7 @@
       },
       interval: {
         type: Number,
-        default: 4000
+        default: 400
       }
     },
 
@@ -42,7 +42,7 @@
         this._initDots()
         this._initSlider()
 
-        if (this.autoplay) {
+        if (this.autoPlay) {
           this._play()
         }
       }, 20)
@@ -96,7 +96,7 @@
           snap: true,
           snapLoop: this.loop,
           snapThreshold: 0.3,
-          snapSpeed: 400
+          snapSpeed: 4000
         })
 
         this.slider.on('scrollEnd', () => {
@@ -106,6 +106,11 @@
             pageIndex -= 1
           }
           this.currentPageIndex = pageIndex
+
+          if (this.autoPlay) {
+            clearTimeout(this.timer)
+            this._play()
+          }
         })
       },
 
