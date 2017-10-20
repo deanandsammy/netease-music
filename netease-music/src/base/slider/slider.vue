@@ -25,7 +25,7 @@
       },
       interval: {
         type: Number,
-        default: 400
+        default: 4000
       }
     },
 
@@ -96,7 +96,7 @@
           snap: true,
           snapLoop: this.loop,
           snapThreshold: 0.3,
-          snapSpeed: 4000
+          snapSpeed: 400
         })
 
         this.slider.on('scrollEnd', () => {
