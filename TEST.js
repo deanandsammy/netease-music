@@ -1,5 +1,9 @@
-let arr = [1, 2, 3];
+let arr = [1, 3, 5];
+let len = arr.length;
 
-let temp = arr.map(item => item * 2);
-
-console.log(temp);
+for (let i = 0; i < len / 2; i++) {
+  let temp = arr[i];
+  
+  arr[i] = arr[len - 1 - i];
+  arr[len - 1 - i] = temp;
+}
