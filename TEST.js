@@ -1,5 +1,5 @@
-let arr = [1, 2, 3];
-
-let temp = arr.map(item => item * 2);
-
-console.log(temp);
+if (1 > 2) {
+    var val = 1;
+    console.log(val);
+    let val = 2;
+}
