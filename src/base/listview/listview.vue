@@ -8,6 +8,7 @@
             <img class="avatar" v-lazy="item.avatar">
             <span class="name">{{item.name}}</span>
           </li>
+
         </ul>
       </li>
     </ul>
