@@ -1,5 +1,24 @@
-let arr = [1, 2, 3];
+// Array.prototype.map 整理数据
 
-console.log(arr.map((item) => {
-  return item * 2
-}))
+let arr = [
+  {key: 1, val: 10},
+  {key: 2, val: 20},
+  {key: 3, val: 30}
+];
+
+let con = arr.map((item) => {
+  let tempObj = {};
+
+  tempObj[item.key] = item.val;
+  return tempObj;
+});
+
+// 字符串反转
+
+function reverseStr(str) {
+  return str.split('').reverse().join('');
+}
+
+let str = 'hello vuejs';
+
+console.log(reverseStr(str));
