@@ -19,6 +19,10 @@ function reverseStr(str) {
   return str.split('').reverse().join('');
 }
 
+function anoReverseStr(str) {
+  return Array.prototype.map.call(str, item => item).reverse().join('')
+}
+
 let str = 'hello vuejs';
 
-console.log(reverseStr(str));
+console.log(anoReverseStr(str));
