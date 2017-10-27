@@ -13,9 +13,9 @@
       </li>
     </ul>
     // shortcut
-    <div class="list-shortcut">
+    <div class="list-shortcut" @touchstart="onShortcutTouchStart">
       <ul>
-        <li v-for="item in shortcutList" class="item">{{item}}</li>
+        <li v-for="(item, index) in shortcutList" class="item" :data-index="index">{{item}}</li>
       </ul>
     </div>
   </scroll>
@@ -29,6 +29,12 @@
       data: {
         type: Array,
         default: []
+      }
+    },
+
+    methods: {
+      onShortcutTouchStart(e) {
+          
       }
     },
 
