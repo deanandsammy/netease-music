@@ -26,3 +26,20 @@ function anoReverseStr(str) {
 let str = 'hello vuejs';
 
 console.log(anoReverseStr(str));
+
+// apply
+
+let o = {
+  name: 'Nicholas',
+  getName() {
+    return function () {
+      console.log(arguments[0]);
+    }
+  }
+};
+
+function getName() {
+  return o.getName.apply(o, arguments[0]);
+}
+
+console.log(getName()(1));

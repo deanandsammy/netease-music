@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c91db27-03a6-4d3b-b4bf-c3ade7386f61" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TEST.js" afterPath="$PROJECT_DIR$/TEST.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/base/listview/listview.vue" afterPath="$PROJECT_DIR$/src/base/listview/listview.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/base/scroll/scroll.vue" afterPath="$PROJECT_DIR$/src/base/scroll/scroll.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,14 +24,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="listview.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="listview.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/base/listview/listview.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+            <state relative-caret-position="1287">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <element signature="e#700#739#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TEST.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TEST.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,10 +128,10 @@
         <option value="$PROJECT_DIR$/netease-music/src/components/singer/singer.vue" />
         <option value="$PROJECT_DIR$/src/base/listview.vue" />
         <option value="$PROJECT_DIR$/src/components/singer/singer.vue" />
-        <option value="$PROJECT_DIR$/TEST.js" />
         <option value="$PROJECT_DIR$/src/common/js/dom.js" />
         <option value="$PROJECT_DIR$/src/base/scroll/scroll.vue" />
         <option value="$PROJECT_DIR$/src/base/listview/listview.vue" />
+        <option value="$PROJECT_DIR$/TEST.js" />
       </list>
     </option>
   </component>
@@ -308,7 +318,7 @@
       <workItem from="1508816159038" duration="2466000" />
       <workItem from="1508931946514" duration="4825000" />
       <workItem from="1509004503811" duration="3812000" />
-      <workItem from="1509104557555" duration="1860000" />
+      <workItem from="1509104557555" duration="2698000" />
     </task>
     <task id="LOCAL-00001" summary="Array.prototype.map()">
       <created>1509021662144</created>
@@ -328,7 +338,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136543000" />
+    <option name="totallyTimeSpent" value="137381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -455,14 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TEST.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/js/dom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
@@ -481,11 +483,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/base/listview/listview.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+        <state relative-caret-position="1287">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="e#700#739#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TEST.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

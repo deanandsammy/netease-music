@@ -37,7 +37,7 @@
       onShortcutTouchStart(e) {
         let anchorIndex = getData(e.target, index)
 
-        
+
       }
     },
 
