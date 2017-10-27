@@ -1,5 +1,5 @@
 <template>
-  <scroll class="listview" :data="data">
+  <scroll class="listview" :data="data" ref="listview">
     <ul>
       <li v-for="group in data" class="list-group">
         <h2 class="list-group-title">{{group.title}}</h2>
@@ -23,6 +23,7 @@
 
 <script type="text/ecmascript-6">
   import Scroll from 'base/scroll/scroll'
+  import {getData} from 'common/js/dom'
 
   export default {
     props: {
@@ -34,7 +35,9 @@
 
     methods: {
       onShortcutTouchStart(e) {
+        let anchorIndex = getData(e.target, index)
 
+        
       }
     },
 
