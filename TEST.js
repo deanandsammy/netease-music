@@ -25,7 +25,7 @@ function anoReverseStr(str) {
 
 let str = 'hello vuejs';
 
-console.log(anoReverseStr(str));
+// console.log(anoReverseStr(str));
 
 // apply
 
@@ -42,4 +42,39 @@ function getName() {
   return o.getName.apply(o, arguments[0]);
 }
 
-console.log(getName()(1));
+// console.log(getName()(1));
+
+// splice 实现
+
+let arrA = [1, 2, 3, 4, 5];
+
+function isArray(arrA) {
+  return Object.prototype.toString.call(arrA).substr(8, 5).toLowerCase() === 'array'
+}
+
+function implementSplice(arr, startIndex, num) {
+  if (isArray(arr)) {
+    let arrStore = [];
+    let len = arr.length;
+    let onOff = true;
+
+    for (let i = 0; i < len; i++) {
+      if (i === startIndex) {
+        onOff = false;
+        len--;
+        arrStore[i] = arr[i + 1];
+        continue
+      }
+
+      if (onOff) {
+        arrStore[i] = arr[i];
+      } else {
+        arrStore[i] = arr[i + 1];
+      }
+    }
+    return arrStore;
+  }
+}
+
+console.log(implementSplice(arrA, 1));
+
