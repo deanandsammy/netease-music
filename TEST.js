@@ -78,4 +78,6 @@ function implementSplice(arr, startIndex, num) {
 
 // console.log(implementSplice(arrA, 1));
 
-// good
+// width and height in javascript
+
+
