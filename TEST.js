@@ -76,5 +76,6 @@ function implementSplice(arr, startIndex, num) {
   }
 }
 
-console.log(implementSplice(arrA, 1));
+// console.log(implementSplice(arrA, 1));
 
+// good

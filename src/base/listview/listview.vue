@@ -1,7 +1,7 @@
 <template>
   <scroll class="listview" :data="data" ref="listview">
     <ul>
-      <li v-for="group in data" class="list-group">
+      <li v-for="group in data" class="list-group" ref="listGroup">
         <h2 class="list-group-title">{{group.title}}</h2>
         <ul>
           <li v-for="item in group.items" class="list-group-item">
@@ -12,8 +12,9 @@
         </ul>
       </li>
     </ul>
-    // shortcut
-    <div class="list-shortcut" @touchstart="onShortcutTouchStart">
+    <!-- shortcut -->
+    <div class="list-shortcut" @touchstart="onShortcutTouchStart"
+         @touchmove.stop.prevent="onShortcutTouchMove">
       <ul>
         <li v-for="(item, index) in shortcutList" class="item" :data-index="index">{{item}}</li>
       </ul>
@@ -25,6 +26,8 @@
   import Scroll from 'base/scroll/scroll'
   import {getData} from 'common/js/dom'
 
+  const ANCHOR_HEIGHT = 18
+
   export default {
     props: {
       data: {
@@ -33,19 +36,43 @@
       }
     },
 
+    created() {
+      this.touch = {}
+    },
+
     methods: {
       onShortcutTouchStart(e) {
-        let anchorIndex = getData(e.target, index)
+        let firstTouch = e.touches[0]
+        let anchorIndex = getData(e.target, 'index')
 
+        this.touch.y1 = firstTouch.pageY
+        this.touch.anchorIndex = anchorIndex
 
+        this._scrollTo(anchorIndex)
+      },
+      onShortcutTouchMove(e) {
+        let firstTouch = e.touches[0]
+        let delta = 0
+        let anchorIndex = 0
+
+        this.touch.y2 = firstTouch.pageY
+        delta = (this.touch.y2 - this.touch.y1) / ANCHOR_HEIGHT | 0
+        anchorIndex = parseInt(this.touch.anchorIndex) + delta
+
+        this._scrollTo(anchorIndex)
+      },
+      _scrollTo(index) {
+        this.$refs.listview.scrollToElement(this.$refs.listGroup[index], 0)
       }
+    },
+
+    mounted() {
+      console.log(this.shortcutList)
     },
 
     computed: {
       shortcutList() {
-        return this.data.map((group) => {
-          return group.title.substr(0, 1)
-        })
+        return this.data.map(group => group.title.substr(0, 1))
       }
     },
 
