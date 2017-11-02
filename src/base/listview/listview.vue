@@ -66,10 +66,6 @@
       }
     },
 
-    mounted() {
-      console.log(this.shortcutList)
-    },
-
     computed: {
       shortcutList() {
         return this.data.map(group => group.title.substr(0, 1))
