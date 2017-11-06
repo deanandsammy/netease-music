@@ -1,5 +1,11 @@
 <template>
-  <scroll class="listview" :data="data" ref="listview">
+  <scroll class="listview"
+          :data="data"
+          ref="listview"
+          :listenScroll="listenScroll"
+          :probeType="probeType"
+          @scroll="scroll"
+  >
     <ul>
       <li v-for="group in data" class="list-group" ref="listGroup">
         <h2 class="list-group-title">{{group.title}}</h2>
@@ -16,7 +22,13 @@
     <div class="list-shortcut" @touchstart="onShortcutTouchStart"
          @touchmove.stop.prevent="onShortcutTouchMove">
       <ul>
-        <li v-for="(item, index) in shortcutList" class="item" :data-index="index">{{item}}</li>
+        <li v-for="(item, index) in shortcutList"
+            class="item"
+            :data-index="index"
+            :class="{'current': currentIndex === index}"
+        >
+          {{item}}
+        </li>
       </ul>
     </div>
   </scroll>
@@ -38,6 +50,16 @@
 
     created() {
       this.touch = {}
+      this.listenScroll = true
+      this.probeType = 3
+      this.listHeight = []
+    },
+
+    data() {
+      return {
+        scrollY: -1,
+        currentIndex: 0
+      }
     },
 
     methods: {
@@ -61,8 +83,41 @@
 
         this._scrollTo(anchorIndex)
       },
+      scroll(pos) {
+        this.scrollY = pos.y
+      },
       _scrollTo(index) {
         this.$refs.listview.scrollToElement(this.$refs.listGroup[index], 0)
+      },
+      _calculateHeight() {
+        this.listHeight = []
+        const list = this.$refs.listGroup
+        const len = list.length
+        let height = 0
+        this.listHeight.push(height)
+
+        for (let i = 0; i < len; i++) {
+          let item = list[i]
+
+          height += item.clientHeight
+          this.listHeight.push(height)
+        }
+      }
+    },
+
+    watch: {
+      data() {
+        setTimeout(() => {
+          this._calculateHeight()
+        }, 20)
+      },
+      scrollY(newY) {
+        const listHeight = this.listHeight
+
+        for (let i = 0; i < listHeight.length; i++) {
+          let height1 = listHeight[i]
+          let height2 = listHeight[i + 1]
+        }
       }
     },
 
