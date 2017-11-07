@@ -1,4 +1,4 @@
-// Array.prototype.map 整理数据
+/*// Array.prototype.map 整理数据
 
 let arr = [
   {key: 1, val: 10},
@@ -74,10 +74,33 @@ function implementSplice(arr, startIndex, num) {
     }
     return arrStore;
   }
-}
+}*/
 
 // console.log(implementSplice(arrA, 1));
 
 // width and height in javascript
 
+/*
+function b() {
+  console.log(val);
+}
 
+function a() {
+  b();
+  let val = 2
+}
+
+let val = 1;
+
+a();
+*/
+
+/*let str = 'hello';
+
+str[0] = '1';
+console.log(str);*/
+
+let arr = [1, 2, 3];
+
+arr[0] = 'hello';
+console.log(arr);

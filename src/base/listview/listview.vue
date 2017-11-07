@@ -31,6 +31,10 @@
         </li>
       </ul>
     </div>
+    <!-- 固定标题 -->
+    <div class="list-fixed" v-show="fixedTitle" ref="fixed">
+      <h1 class="fixed-title">{{fixedTitle}}</h1>
+    </div>
   </scroll>
 </template>
 
@@ -39,6 +43,7 @@
   import {getData} from 'common/js/dom'
 
   const ANCHOR_HEIGHT = 18
+  const TITLE_HEIGHT = 30
 
   export default {
     props: {
@@ -58,7 +63,8 @@
     data() {
       return {
         scrollY: -1,
-        currentIndex: 0
+        currentIndex: 0,
+        diff: -1
       }
     },
 
@@ -87,6 +93,19 @@
         this.scrollY = pos.y
       },
       _scrollTo(index) {
+        if (!index && index !== 0) {
+          return
+        }
+
+        // 边界处理
+        if (index < 0) {
+          index = 0
+        }
+        if (index > this.listHeight.length - 2) {
+          index = this.listHeight.length
+        }
+
+        this.scrollY = -this.listHeight[index]
         this.$refs.listview.scrollToElement(this.$refs.listGroup[index], 0)
       },
       _calculateHeight() {
@@ -114,16 +133,48 @@
       scrollY(newY) {
         const listHeight = this.listHeight
 
+        // 当在顶部滚动  newY > 0
+        if (newY > 0) {
+          this.currentIndex = 0
+          return
+        }
+
+        // 在中间部分滚动
         for (let i = 0; i < listHeight.length; i++) {
           let height1 = listHeight[i]
           let height2 = listHeight[i + 1]
+
+          if (-newY >= height1 && -newY < height2) {
+            this.currentIndex = i
+            this.diff = height2 + newY
+            return
+          }
         }
+
+        // 在底部滚动
+        this.currentIndex = listHeight.length - 2
+      },
+      diff(newVal) {
+        let fixedTop = (newVal < TITLE_HEIGHT) ? newVal - TITLE_HEIGHT : 0
+
+        if (this.fixedTop === fixedTop) {
+          return
+        }
+
+        this.fixedTop = fixedTop
+        this.$refs.fixed.style.transform = `translate3D(0,${fixedTop}px,0)`
       }
     },
 
     computed: {
       shortcutList() {
         return this.data.map(group => group.title.substr(0, 1))
+      },
+      fixedTitle() {
+        if (this.scrollY > 0) {
+          return ''
+        }
+        return this.data[this.currentIndex] ? this.data[this.currentIndex].title : ''
       }
     },
 
