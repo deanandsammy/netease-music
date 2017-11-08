@@ -83,6 +83,7 @@
 
         this._scrollTo(anchorIndex)
       },
+
       onShortcutTouchMove(e) {
         let firstTouch = e.touches[0]
         let delta = 0
@@ -94,9 +95,11 @@
 
         this._scrollTo(anchorIndex)
       },
+
       scroll(pos) {
         this.scrollY = pos.y
       },
+
       _scrollTo(index) {
         if (!index && index !== 0) {
           return
@@ -113,6 +116,7 @@
         this.scrollY = -this.listHeight[index]
         this.$refs.listview.scrollToElement(this.$refs.listGroup[index], 0)
       },
+
       _calculateHeight() {
         this.listHeight = []
         const list = this.$refs.listGroup
@@ -135,6 +139,7 @@
           this._calculateHeight()
         }, 20)
       },
+
       scrollY(newY) {
         const listHeight = this.listHeight
 
@@ -145,7 +150,7 @@
         }
 
         // 在中间部分滚动
-        for (let i = 0; i < listHeight.length; i++) {
+        for (let i = 0; i < listHeight.length - 1; i++) {
           let height1 = listHeight[i]
           let height2 = listHeight[i + 1]
 
@@ -159,6 +164,7 @@
         // 在底部滚动
         this.currentIndex = listHeight.length - 2
       },
+
       diff(newVal) {
         let fixedTop = (newVal < TITLE_HEIGHT) ? newVal - TITLE_HEIGHT : 0
 
@@ -175,6 +181,7 @@
       shortcutList() {
         return this.data.map(group => group.title.substr(0, 1))
       },
+
       fixedTitle() {
         if (this.scrollY > 0) {
           return ''
