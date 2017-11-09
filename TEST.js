@@ -100,7 +100,10 @@ a();
 str[0] = '1';
 console.log(str);*/
 
-let arr = [1, 2, 3];
+/*let arr = [1, 2, 3];
 
 arr[0] = 'hello';
-console.log(arr);
+console.log(arr);*/
+
+// TODO: JS中的函数重载
+
