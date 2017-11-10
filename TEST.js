@@ -105,5 +105,15 @@ console.log(str);*/
 arr[0] = 'hello';
 console.log(arr);*/
 
-// TODO: JS中的函数重载
+// Array.prototype.map
 
+let arr = [1, 2, 3, 4, 5];
+
+let store = arr.map((item, index) => {
+  return {
+    id: index,
+    no: item
+  }
+})
+
+console.log(store)
