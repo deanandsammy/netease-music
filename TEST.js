@@ -130,11 +130,28 @@ let o = arr.reduce((prev, cur) => {
 // console.log(o);
 
 
-let str = 'HelloVuejsandNodejs';
+/*let str = 'HelloVuejsandNodejs';
 
 let o = str.split('').reduce((prev, cur) => {
   prev[cur] ? prev[cur]++ : prev[cur] = 1
   return prev;
 }, {});
 
-console.log(o);
+console.log(o);*/
+
+// reverse
+
+Array.prototype.reverse = function () {
+  for (let i = 0, j = this.length - 1; i < j; i++, j--) {
+    let current_i = this[i];
+    let current_j = this[j];
+
+    this[i] = current_j;
+    this[j] = current_i;
+  }
+}
+
+let arr = [1, 2, 3, 4, 5];
+
+arr.reverse();
+console.log(arr);
