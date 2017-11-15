@@ -107,6 +107,7 @@ console.log(arr);*/
 
 // Array.prototype.map
 
+/*
 let arr = [1, 2, 3, 4, 5];
 
 let store = arr.map((item, index) => {
@@ -117,3 +118,23 @@ let store = arr.map((item, index) => {
 })
 
 console.log(store)
+*/
+
+/*let arr = [1, 2, 3];
+
+let o = arr.reduce((prev, cur) => {
+  prev.push(cur + 1);
+  return prev;
+}, []);*/
+
+// console.log(o);
+
+
+let str = 'HelloVuejsandNodejs';
+
+let o = str.split('').reduce((prev, cur) => {
+  prev[cur] ? prev[cur]++ : prev[cur] = 1
+  return prev;
+}, {});
+
+console.log(o);
