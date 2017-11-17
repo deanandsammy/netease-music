@@ -141,7 +141,7 @@ console.log(o);*/
 
 // reverse
 
-Array.prototype.reverse = function () {
+/*Array.prototype.reverse = function () {
   for (let i = 0, j = this.length - 1; i < j; i++, j--) {
     let current_i = this[i];
     let current_j = this[j];
@@ -154,4 +154,14 @@ Array.prototype.reverse = function () {
 let arr = [1, 2, 3, 4, 5];
 
 arr.reverse();
-console.log(arr);
+console.log(arr);*/
+
+/*let arr = [1, 2, 3, 4, 5]
+
+console.log(arr.filter(n => n > 2));*/
+
+let arr = [1, , , 4, 5, 6, , , , , , 9];
+
+arr.find((value, index) => {
+  console.log('Visited index '+index+' with value '+value);
+});
