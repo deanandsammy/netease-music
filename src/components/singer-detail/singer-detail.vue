@@ -1,6 +1,6 @@
 <template>
   <transition name="slide">
-    <music-list :songs="songs"></music-list>
+    <music-list :title="title" :bg-image="bgImage" :songs="songs"></music-list>
   </transition>
 </template>
 
@@ -18,6 +18,12 @@
       }
     },
     computed: {
+      title() {
+        return this.singer.title
+      },
+      bgImage() {
+        return this.singer.avatar
+      },
       ...mapState([
         'singer'
       ])
