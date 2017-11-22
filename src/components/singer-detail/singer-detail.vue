@@ -14,12 +14,12 @@
   export default {
     data() {
       return {
-        song: []
+        songs: []
       }
     },
     computed: {
       title() {
-        return this.singer.title
+        return this.singer.name
       },
       bgImage() {
         return this.singer.avatar
