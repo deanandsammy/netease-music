@@ -1,30 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>width&height in javascript</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border: 1px solid blue;
+      transform: translateX(0);
+    }
+
+    .inner {
+      position: fixed;
+      top: 5px;
+      bottom: 0;
+      width: 100%;
+      background: rgba(12, 12, 56, .5);
+    }
+
+    .test {
+      position: absolute;
+      right: -100%;
+      bottom: 0;
+    }
+
+    .sibling {
+      position: absolute;
+      left: 100%;
+      top: 0;
+      width: 200px;
+      height: 200px;
+      border: 1px solid purple;
+    }
+  </style>
 </head>
-<style>
-  body {
-    width: 500px;
-    height: 350px;
-    margin: 10px;
-    padding: 40px;
-    border: 20px solid blue;
-    background-color: orange;
-    overflow: scroll;
-  }
-</style>
-<script>
-  window.onload = function () {
-    let timer = setTimeout(() => {
-        console.log(1);
-    },1000);
-
-    console.log(2);
-  }
-</script>
 <body>
-
+<div class="container">
+  <div class="inner">
+    <div class="test">test</div>
+  </div>
+  <div class="sibling"></div>
+</div>
 </body>
 </html>
