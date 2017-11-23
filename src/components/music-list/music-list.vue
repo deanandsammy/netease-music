@@ -73,6 +73,7 @@
     methods: {
       scroll(pos) {
         this.scrollY = pos.y
+        console.log(this.scrollY)
       },
       back() {
         this.$router.back()
