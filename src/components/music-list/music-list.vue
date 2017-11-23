@@ -67,13 +67,12 @@
     },
     mounted() {
       this.imageHeight = this.$refs.bgImage.clientHeight
-      this.minTransalteY = -this.imageHeight + RESERVED_HEIGHT
+      this.minTranslateY = -this.imageHeight + RESERVED_HEIGHT
       this.$refs.list.$el.style.top = `${this.imageHeight}px`
     },
     methods: {
       scroll(pos) {
         this.scrollY = pos.y
-        console.log(this.scrollY)
       },
       back() {
         this.$router.back()
@@ -81,7 +80,7 @@
     },
     watch: {
       scrollY(newVal) {
-        let translateY = Math.max(this.minTransalteY, newVal)
+        let translateY = Math.max(this.minTranslateY, newVal)
         let scale = 1
         let zIndex = 0
         let blur = 0
@@ -95,7 +94,7 @@
 
         this.$refs.layer.style[transform] = `translate3d(0,${translateY}px,0)`
         this.$refs.filter.style[backdrop] = `blur(${blur}px)`
-        if (newVal < this.minTransalteY) {
+        if (newVal < this.minTranslateY) {
           zIndex = 10
           this.$refs.bgImage.style.paddingTop = 0
           this.$refs.bgImage.style.height = `${RESERVED_HEIGHT}px`
