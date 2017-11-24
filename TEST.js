@@ -160,8 +160,16 @@ console.log(arr);*/
 
 console.log(arr.filter(n => n > 2));*/
 
-let arr = [1, , , 4, 5, 6, , , , , , 9];
+/*let arr = [1, , , 4, 5, 6, , , , , , 9];
 
 arr.find((value, index) => {
   console.log('Visited index '+index+' with value '+value);
-});
+});*/
+
+/*let arr = [1, 2, 3, 4, 5, 6];
+
+console.log(arr.map(item => item < 3 ? 3 : item));
+
+console.log(arr.map(item => Math.max(...[item, 3])));*/
+
+
