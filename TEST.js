@@ -172,4 +172,3 @@ console.log(arr.map(item => item < 3 ? 3 : item));
 
 console.log(arr.map(item => Math.max(...[item, 3])));*/
 
-
