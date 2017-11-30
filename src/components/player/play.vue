@@ -127,6 +127,7 @@
     },
     computed: {
       cdCls() {
+        // TODO 'paly pause' ???
         return this.playing ? 'play' : 'play pause'
       },
       playIcon() {
