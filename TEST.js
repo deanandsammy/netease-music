@@ -174,4 +174,70 @@ console.log(arr.map(item => Math.max(...[item, 3])));*/
 
 /*console.log([1, 5, 8, 16, 22, 38, 25, 19].map(Math.max(...[item, 15])));*/
 
-console.log([1, 27, 5, 94, 12, 8, 35].filter(num => num > 5));
+/*console.log([1, 27, 5, 94, 12, 8, 35].filter(num => num > 5));*/
+
+// shuffle
+
+/*function isArray(array) {
+  if (Array.isArray) {
+    return Array.isArray(array)
+  }
+
+  return Object.prototype.toString.call(array).slice(-6) === 'Array'
+}
+
+/!**
+ * @function shuffle elements of the specified array
+ * @param array  instance of Array
+ * @return Array shuffled array
+ *!/
+
+function shuffle(a) {
+  if (!isArray(a)) {
+    throw new Error('a is not a Array')
+  }
+
+  if (a.length === 1) {
+    return a
+  }
+
+  let len = a.length;
+  for (let i = 1; i < len; i++) {
+    let randomIndex = Math.random() * (i + 1) | 0;
+    let tempStore = a[i];
+
+    a[i] = a[randomIndex];
+    a[randomIndex] = tempStore;
+  }
+
+  return a
+}
+
+console.log([1, 2, 3].sort(() => Math.random() - .5));*/
+
+function getRandomInt(min, max) {
+  return Math.random() * max
+}
+
+/*  min <= Math.random()*(max-min)+min < max   */
+
+console.log(Math.round(Math.random()*2+2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
