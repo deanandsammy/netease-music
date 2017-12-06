@@ -215,14 +215,49 @@ function shuffle(a) {
 
 console.log([1, 2, 3].sort(() => Math.random() - .5));*/
 
-function getRandomInt(min, max) {
+/*function getRandomInt(min, max) {
   return Math.random() * max
-}
+}*/
 
 /*  min <= Math.random()*(max-min)+min < max   */
 
-console.log(Math.round(Math.random()*2+2));
 
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+function isArray(arr) {
+  if (Array.isArray) {
+    return Array.isArray(arr)
+  }
+
+  return Object.prototype.toString.call(arr).substr(-6) === 'Array'
+}
+
+function shuffle(arr) {
+  if (!isArray(arr)) {
+    throw new TypeError('param is not an instance of Array')
+  }
+
+  let _arr = arr.slice()
+  let _len = _arr.length
+
+  if (_len <= 1) {
+    return _arr
+  }
+
+  for (let i = 1; i < _len; i++) {
+    let r = getRandomInt(0, i)
+    let t = _arr[i]
+
+    _arr[i] = _arr[r]
+    _arr[r] = t
+  }
+
+  return _arr
+}
+
+console.log(shuffle('string'));
 
 
 
